@@ -23,7 +23,7 @@ public class Client {
             Thread thread = new Thread(() -> {
                 int result = meter.measure(i);
                 //System.out.println(result);
-//                В это место потокоопасный код
+//                В этом месте потокоопасный код
                 lock.lock();
                 results.add(result);
                 lock.unlock();
@@ -35,7 +35,7 @@ public class Client {
         Thread.sleep(3500);
 
         //Задача: отсортируйте результаты по убыванию,
-        //современные методы
+        //используя современные методы
         System.out.println(results);
 
     }
