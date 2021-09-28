@@ -24,19 +24,19 @@ public class HibernateDemo {
         });
 
 //        Product p = products.get(0);
+//        Product p = session.get(Product.class,317); //так лучше
 //        p.setPrice(123.45);
 //        session.beginTransaction();
 //        session.save(p);
 //        session.getTransaction().commit(); //ошибка прав но SQL хороший
 
-          Product p = new Product();
-          p.setName("lala");
-          p.setCode("12345");
-          p.setPrice(123.4);
-          session.beginTransaction();
-          session.save(p);
-          session.getTransaction().commit();
-
+//          Product p = new Product();
+//          p.setName("lala");
+//          p.setCode("12345");
+//          p.setPrice(123.4);
+//          session.beginTransaction();
+//          session.save(p);
+//          session.getTransaction().commit(); //ошибка прав но SQL хороший
     }
 //        Напишите Hibernate код, который добавит в таблицу Hackers
 //        ваше имя и выведет все имена, которые там есть.
