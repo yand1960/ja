@@ -24,11 +24,14 @@ public class HibernateDemo {
         });
 
 //        Product p = products.get(0);
-//        Product p = session.get(Product.class,317); //так лучше
 //        p.setPrice(123.45);
 //        session.beginTransaction();
-//        session.save(p);
+//        //session.save(p);
 //        session.getTransaction().commit(); //ошибка прав но SQL хороший
+
+        Product p = session.get(Product.class, 1);
+        p.setPrice(123.45);
+        session.beginTransaction().commit();
 
 //          Product p = new Product();
 //          p.setName("lala");

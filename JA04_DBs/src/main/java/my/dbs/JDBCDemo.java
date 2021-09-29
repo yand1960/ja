@@ -9,7 +9,7 @@ public class JDBCDemo {
         try(Connection cn =
                     DriverManager.getConnection(
                             "jdbc:sqlserver://yand.dyndns.org;databaseName=AdventureWorks;"
-                                    + "encrypt=false;trustServerCertificate=true",
+                                    + "encrypt=true;trustServerCertificate=true;sslProtocol=TLSv1.2",
                             "northwind","northwind")) {
 
             String sql = "SELECT ProductID, Name, ProductNumber, ListPrice " +
