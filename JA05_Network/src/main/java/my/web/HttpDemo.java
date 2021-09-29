@@ -58,9 +58,7 @@ public class HttpDemo {
                 .request()
                 .get(CBRData.class);
         System.out.println(data.getValute().get("USD").getValue());
-
     }
-
 }
 
 class CBRData {
