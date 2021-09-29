@@ -62,7 +62,6 @@ public class HttpDemo {
 }
 
 class CBRData {
-
     private String date;
     private String previousDate;
     private String previousURL;
