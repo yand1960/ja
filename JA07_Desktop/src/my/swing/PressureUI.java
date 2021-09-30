@@ -69,7 +69,7 @@ public class PressureUI extends JFrame {
         },1,1, TimeUnit.SECONDS);
 
         btn.addActionListener(e -> {
-            displays.forEach(d ->{
+            displays.forEach(d -> {
                 d.setText("Wait...");
             });
 
@@ -89,10 +89,8 @@ public class PressureUI extends JFrame {
                     });
                     counter.decrementAndGet();
                 }).start();
-
             }
         });
-
     }
 
     public static void main(String[] args) {
