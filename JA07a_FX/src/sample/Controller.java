@@ -22,7 +22,7 @@ public class Controller {
 
     //а вот так:
     private final ObjectProperty<String> caption
-                    = new SimpleObjectProperty<>("Click me");
+                    = new SimpleObjectProperty<>("Click me!!!");
 
     public ObjectProperty<String> captionProperty() {
         return caption;
