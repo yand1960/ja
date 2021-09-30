@@ -3,8 +3,8 @@
 <!--
 Пример построения исполняемого jar файла с зависимостями
 средствами Maven - см.раздел <build>. Чтобы Идея использовала
-чисто мавеновский, а не свой встроенный поcтроитель,
-нужно зайти File - Settings - <Build,Execution...>-<Build Tools>-Maven-Runner
+чисто мавеновский, а не свой встроенный поcтроитель, нужно зайти
+File - Settings - <Build,Execution...>-<Build Tools>-Maven-Runner
 и поставить опцию <Delegate IDE Build/Run actions to Maven>.
  -->
 
