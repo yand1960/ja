@@ -50,8 +50,6 @@ public class HttpDemo {
 //    Используйте ее для получения курса USD
 
         String url = "https://www.cbr-xml-daily.ru/daily_json.js";
-
-        Client client = ClientBuilder.newClient();
         CBRData data = ClientBuilder.newClient()
                 .register(CbrCorrectionFilter.class) //ЦБР передает неверный заголовок. Приходится подсказывать
                 .target(url)
