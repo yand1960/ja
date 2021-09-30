@@ -11,10 +11,16 @@ import javafx.scene.control.Button;
 
 public class Controller {
 
+    //Способ получить ссылку на компоненты страницы
     @FXML
     private Button btn1;
 
+    //Альтернативный способ - связывание в духе MVVM
+    // Но при этом observable свойства пишутся по-другому,
+    // чем в класических бобах. Т.е. не так:
     //private String caption = "Click me!!!!!!";
+
+    //а вот так:
     private final ObjectProperty<String> caption
                     = new SimpleObjectProperty<>("Click me");
 

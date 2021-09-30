@@ -16,7 +16,8 @@
             <Button text="33333"
                     onAction="#btn1_click" />
             <Button text="44444"
-                    onAction="#btn1_click" />
+                    onAction="#btn1_click" >
+
         </HBox>
         <Button text="Another button"
                 onAction="#btn1_click" />
