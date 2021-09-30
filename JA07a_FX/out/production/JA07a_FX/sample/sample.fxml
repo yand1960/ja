@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <GridPane fx:controller="sample.Controller"
           xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-    <VBox padding="10px">
+    <VBox>
         <Button text="${controller.caption}" fx:id="btn1"
                 onAction="#btn1_click" />
         <Button text="Another button" fx:id="btn2"
