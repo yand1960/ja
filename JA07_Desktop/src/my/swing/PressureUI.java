@@ -56,8 +56,9 @@ public class PressureUI extends JFrame {
         this.add(txt5);
         this.add(bar);
 
-        //Экзекьютор, которые следит за показом прогресс бара
-        ScheduledExecutorService watch = Executors.newScheduledThreadPool(1);
+        //Экзекьютор, который следит за показом прогресс бара
+        ScheduledExecutorService watch =
+                Executors.newScheduledThreadPool(1);
         watch.scheduleAtFixedRate(() ->{
             System.out.println("Executor is on");
             if (counter.get() == 0) {
@@ -76,13 +77,13 @@ public class PressureUI extends JFrame {
             counter.set(5);
 
             //Запрос показаний датчиков в параллельных потоках
-            for(int n=1; n<6; n++) {
+            for(int n = 1; n < 6; n++) {
                 final int i = n;
                 new Thread(() -> {
                     String result = meter.get(i);
-                    //Так нельзя: thread affinity
+                    //Так нельзя обновлять UI: thread affinity
                     //displays.get(i - 1).setText(result);
-                    //Вызов исполнения на основном потоке:
+                    //Вызов обновления UI на основном потоке:
                     SwingUtilities.invokeLater(() -> {
                         displays.get(i - 1).setText(result);
                     });
