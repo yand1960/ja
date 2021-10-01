@@ -15,10 +15,9 @@ public class DemoClassWithEvent {
     public int plus(int x, int y) {
         int result = x + y;
         if(result == 777) {
-            if(jackpotListeners.size() != 0)
-                jackpotListeners.forEach( listener -> {
-                    listener.jackpot(1000000.0);
-                });
+            jackpotListeners.forEach( listener -> {
+                listener.jackpot(1000000.0);
+            });
         }
         return result;
     }
