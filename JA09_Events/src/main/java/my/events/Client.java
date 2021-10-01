@@ -16,11 +16,11 @@ public class Client {
 
         //А так веселее:
         scwc.addProgressListener(percent -> {
-            System.out.println("" + percent + "%");
+            System.out.print("\rDone: " + percent + "%");
         });
 
         scwc.addCompletedListener(result -> {
-            System.out.println("Result: " +result);
+            System.out.println("\nResult: " +result);
         });
 
         scwc.slow();
