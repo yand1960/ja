@@ -6,6 +6,7 @@
 чисто мавеновский, а не свой встроенный поcтроитель, нужно зайти
 File - Settings - <Build,Execution...>-<Build Tools>-Maven-Runner
 и поставить опцию <Delegate IDE Build/Run actions to Maven>.
+(Или использовать mvn package из окна Maven)
  -->
 
 <project xmlns="http://maven.apache.org/POM/4.0.0"

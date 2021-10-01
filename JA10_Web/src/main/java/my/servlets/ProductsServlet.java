@@ -21,7 +21,7 @@ public class ProductsServlet extends HttpServlet {
         Repository repository = new RepositoryJDBC();
         List<Product> products = repository.getAllProducts();
         final PrintWriter out = resp.getWriter();
-        out.println("<h1>Products</h1>");
+        out.println("<h1>Product list</h1>");
         products.forEach(p -> {
             out.println(p.getName() + " - " + p.getPrice() + "<br />");
         });
