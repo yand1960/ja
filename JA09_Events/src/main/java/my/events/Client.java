@@ -20,7 +20,7 @@ public class Client {
         });
 
         scwc.addCompletedListener(result -> {
-            System.out.println("\nResult: " +result);
+            System.out.println("\nResult: " + result);
         });
 
         scwc.slow();

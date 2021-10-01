@@ -9,6 +9,13 @@ import java.util.List;
 public class RepositoryJDBC implements Repository {
 
     public List<Product> getAllProducts() {
+
+        try {
+            Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
         List<Product> products = new ArrayList<>();
         try(Connection cn =
             DriverManager.getConnection(
