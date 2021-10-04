@@ -17,4 +17,19 @@ public class Dog implements Animal {
     public void setVoice(String value) {
         voice = value;
     }
+
+    @Override
+    public void escape() {
+
+    }
+
+    @Override
+    public Class getEnemy() {
+        return null;
+    }
+
+    @Override
+    public void setEnemy(Class enemy) {
+
+    }
 }

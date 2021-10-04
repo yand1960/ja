@@ -6,5 +6,27 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:component-scan base-package="my.animals2" />
+    <bean class="my.animals.tasks.Cat" id="pet1" />
+    <bean class="my.animals.tasks.Dog" id="bobik">
+        <property name="voice" value="RRR-Gav" />
+    </bean>
+    <bean class="my.animals.tasks.Dog" id="sharik">
+        <property name="voice" value="hab" />
+    </bean>
+
+    <bean class="my.animals.tasks.Vasya" id="master">
+        <property name="name" value="Vasisualij" />
+        <property name="pet" ref="bobik" />
+    </bean>
+
+    <bean class="my.animals.tasks.Rendevouz">
+        <constructor-arg name="animals">
+            <list>
+                <ref bean="pet1" />
+                <ref bean="bobik" />
+                <ref bean="sharik" />
+            </list>
+        </constructor-arg>
+
+    </bean>
 </beans>
