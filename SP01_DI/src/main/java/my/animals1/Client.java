@@ -23,7 +23,7 @@ public class Client {
 //        System.out.println(person.getName() + " feeds his pet");
 //        person.feed();
 
-        // А это типично: собрать конеекст и запустить в нем процесс
+        // А это типично: собрать контекст и запустить в нем процесс
         context.getBean(BusinessProcess.class).start();
 
 //        Напишите бизнес процесс, в котором оба животных из контекста
