@@ -6,4 +6,15 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
+    <bean class="my.animals1.Cat" id="pet1" />
+    <bean class="my.animals1.Dog" id="pet2">
+        <property name="voice" value="RRR-Gav" />
+    </bean>
+    <bean class="my.animals1.Vasya" id="master">
+        <property name="name" value="Vasisualij" />
+        <property name="pet" ref="pet2" />
+    </bean>
+<!--    <bean class="my.animals1.FeedProcess">-->
+<!--        <constructor-arg name="person" ref="master" />-->
+<!--    </bean>-->
 </beans>

@@ -1,11 +1,31 @@
 package my.animals1;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Client {
     public static void main(String[] args) {
         // При POJO не удается избежать тесных зависимостей
 //        Animal a1 = new Cat();
 //        a1.eat();
 
+        // Революция! Полностью loosely coupled code
+        Animal a1;
+        ApplicationContext context =
+                new ClassPathXmlApplicationContext("spring-config1.xml");
+//        a1 = context.getBean("pet1",Animal.class);
+//        a1.eat();
+//        System.out.println(a1.getVoice());
 
+        //Бизнес - процесс обычно релизуется и запускается внутри боба
+        // Поэтому данные внеконтекствный код не типичен
+//        Human person = context.getBean(Human.class);
+//        System.out.println(person.getName() + " feeds his pet");
+//        person.feed();
+
+        context.getBean(BusinessProcess.class).start();
+
+//        Напишите бизнес процесс, в котором оба животных из контекста
+//        покормятся самостоятельно. Процесс назовем SelfFeedingProcess
     }
 }
