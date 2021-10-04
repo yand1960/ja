@@ -6,12 +6,18 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean class="my.animals.tasks.Cat" id="pet1" />
+    <bean class="my.animals.tasks.Cat" id="murka">
+        <property name="enemy" value="my.animals.tasks.Dog" />
+    </bean>
+
     <bean class="my.animals.tasks.Dog" id="bobik">
         <property name="voice" value="RRR-Gav" />
     </bean>
+
+<!--    Трусливый Шарик боится кошек-->
     <bean class="my.animals.tasks.Dog" id="sharik">
         <property name="voice" value="hab" />
+        <property name="enemy" value="my.animals.tasks.Cat" />
     </bean>
 
     <bean class="my.animals.tasks.Vasya" id="master">
@@ -22,7 +28,7 @@
     <bean class="my.animals.tasks.Rendevouz">
         <constructor-arg name="animals">
             <list>
-                <ref bean="pet1" />
+                <ref bean="murka" />
                 <ref bean="bobik" />
                 <ref bean="sharik" />
             </list>

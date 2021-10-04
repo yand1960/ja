@@ -2,7 +2,7 @@ package my.animals.tasks;
 
 public class Cat implements Animal {
     private String voice = "Meow";
-    private Class enemy = Dog.class;
+    private Class enemy;
 
     @Override
     public void eat() {

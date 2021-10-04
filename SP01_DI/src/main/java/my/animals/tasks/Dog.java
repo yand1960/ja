@@ -2,6 +2,7 @@ package my.animals.tasks;
 
 public class Dog implements Animal {
     private String voice = "Hab";
+    private Class enemy;
 
     @Override
     public void eat() {
@@ -20,16 +21,16 @@ public class Dog implements Animal {
 
     @Override
     public void escape() {
-
+        System.out.println("Прячусь в будке");
     }
 
     @Override
     public Class getEnemy() {
-        return null;
+        return enemy;
     }
 
     @Override
     public void setEnemy(Class enemy) {
-
+        this.enemy = enemy;
     }
 }
