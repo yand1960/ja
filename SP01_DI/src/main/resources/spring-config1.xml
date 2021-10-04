@@ -7,14 +7,28 @@
           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean class="my.animals1.Cat" id="pet1" />
-    <bean class="my.animals1.Dog" id="pet2">
+    <bean class="my.animals1.Dog" id="bobik">
         <property name="voice" value="RRR-Gav" />
+    </bean>
+    <bean class="my.animals1.Dog" id="sharik">
+        <property name="voice" value="hab" />
     </bean>
     <bean class="my.animals1.Vasya" id="master">
         <property name="name" value="Vasisualij" />
-        <property name="pet" ref="pet2" />
+        <property name="pet" ref="bobik" />
     </bean>
 <!--    <bean class="my.animals1.FeedProcess">-->
 <!--        <constructor-arg name="person" ref="master" />-->
 <!--    </bean>-->
+
+    <bean class="my.animals1.SelfFeedingProcess">
+        <constructor-arg name="animals">
+            <list>
+                <ref bean="pet1" />
+                <ref bean="bobik" />
+                <ref bean="sharik" />
+            </list>
+        </constructor-arg>
+
+    </bean>
 </beans>

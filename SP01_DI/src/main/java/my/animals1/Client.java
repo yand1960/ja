@@ -17,12 +17,13 @@ public class Client {
 //        a1.eat();
 //        System.out.println(a1.getVoice());
 
-        //Бизнес - процесс обычно релизуется и запускается внутри боба
-        // Поэтому данные внеконтекствный код не типичен
+        //Бизнес - процесс обычно реализуется и запускается внутри боба
+        // Поэтому данный внеконтекстный код не типичен
 //        Human person = context.getBean(Human.class);
 //        System.out.println(person.getName() + " feeds his pet");
 //        person.feed();
 
+        // А это типично: собрать конеекст и запустить в нем процесс
         context.getBean(BusinessProcess.class).start();
 
 //        Напишите бизнес процесс, в котором оба животных из контекста
