@@ -12,7 +12,9 @@ public class MyLogAspect {
     @Before("execution(* *.minus(*,*))")
     public void doLog(JoinPoint point) {
         System.out.println("Intercepted! "
-                + point.toShortString() );
+                + point.toShortString() + " "
+                + point.getTarget().getClass().toString() + " "
+                + point.getSignature().getName());
         for(Object a: point.getArgs()) {
             System.out.println("Arg: " + a.toString());
         }
