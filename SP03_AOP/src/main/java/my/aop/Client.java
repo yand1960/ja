@@ -8,6 +8,11 @@ public class Client {
         ApplicationContext context =
                 new ClassPathXmlApplicationContext("spring-config.xml");
 
-        System.out.println(context.getBean(Calc.class).plus(1,2));
+        Calc calc = context.getBean(Calc.class);
+        System.out.println(calc.plus(1,2));
+        System.out.println(calc.minus(1,2));
+
+        System.out.println(calc.getClass().toString());
+
     }
 }
