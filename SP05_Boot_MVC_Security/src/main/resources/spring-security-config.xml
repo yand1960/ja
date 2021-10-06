@@ -11,15 +11,15 @@
 
     <!-- Expressions are related to words like "hasRole()", hasAnyRole()", "and" , "or" and etc.  -->
     <security:http use-expressions="true" >
-        <security:intercept-url pattern="/history" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
+        <security:intercept-url pattern="/time123" access="hasAnyRole('ROLE_ADMIN','ROLE_USER')" />
         <!-- 		<security:intercept-url pattern="/restricted" access="hasRole('ROLE_ADMIN')"/> -->
-        <security:form-login login-page="/login"
+        <security:form-login login-page="/login.html"
                              login-processing-url="/perform-login"
                              username-parameter="usr"
                              password-parameter="pwd"
-                             default-target-url="/history"
+                             default-target-url="/time"
         />
-        <security:logout logout-url="/logoff" logout-success-url="/login"/>
+        <security:logout logout-url="/logout" logout-success-url="/login.html"/>
 
         <!-- не добавлять токен безопасности на форму логина -->
         <security:csrf disabled="true"/>
@@ -28,6 +28,7 @@
     <security:authentication-manager>
         <security:authentication-provider>
             <security:user-service>
+                <!-- {noop} - остсутствие кодирования пароля-->
                 <security:user name="admin" password="{noop}password" authorities="ROLE_ADMIN, ROLE_USER"/>
                 <security:user name="user" password="{noop}password" authorities="ROLE_USER"/>
             </security:user-service>
