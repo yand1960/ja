@@ -8,8 +8,13 @@
             let url = "api/products?letters="
                     + document.getElementById("letters").value;
             let query = await fetch(url);
-            let products = query.json();
+            let products = await query.json();
             console.log(products);
+            let out = "";
+            for(let i=0; i < products.length; i++) {
+                out += products[i].name + "<br />";
+            }
+            document.getElementById("products").innerHTML = out;
         }
     </script>
 </head>
