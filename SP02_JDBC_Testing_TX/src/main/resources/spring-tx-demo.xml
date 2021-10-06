@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+
+    <bean class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="ds1" />
+    </bean>
+
+    <bean class="com.microsoft.sqlserver.jdbc.SQLServerDataSource" id="ds1">
+        <property name="URL"
+                  value="jdbc:sqlserver://yand.dyndns.org; databaseName=AdventureWorks" />
+        <property name="user" value="northwind" />
+        <property name="password" value="northwind" />
+    </bean>
+
+    <context:component-scan base-package="my.tx" />
+
+<!--    Это круто и просто, но требует сервера-->
+<!--    <tx:jta-transaction-manager />-->
+
+    <bean id="ta1"
+        class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="ds1" />
+    </bean>
+    <tx:annotation-driven transaction-manager="ta1" />
+</beans>
