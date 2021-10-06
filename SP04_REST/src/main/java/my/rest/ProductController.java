@@ -21,6 +21,7 @@ public class ProductController {
         return (new Date()).toString();
     }
 
+
     @RequestMapping("api/products")
     public List<Product> products(String letters) {
         return
