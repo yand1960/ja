@@ -46,6 +46,7 @@
     </dependencies>
 
     <build>
+        <finalName>aw_rest</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

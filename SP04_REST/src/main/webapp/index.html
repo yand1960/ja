@@ -11,8 +11,8 @@
             let products = await query.json();
             console.log(products);
             let out = "";
-            for(let i=0; i < products.length; i++) {
-                out += products[i].name + "<br />";
+            for(let p of products) {
+                out += p.name + "<br />";
             }
             document.getElementById("products").innerHTML = out;
         }
