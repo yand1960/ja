@@ -6,7 +6,7 @@
          metadata-complete="false">
 
 <!--    Этот сервлет ожидает, что конфигурация контекста находится
-        в файлк WEB-INF/mvc-dispatcher-servlet.xml -->
+        в файлe WEB-INF/mvc-dispatcher-servlet.xml -->
     <servlet>
         <servlet-name>mvc-dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
