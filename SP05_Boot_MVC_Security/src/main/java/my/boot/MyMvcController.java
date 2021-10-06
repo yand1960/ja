@@ -12,8 +12,8 @@ import java.util.Date;
 import java.util.HashMap;
 
 @Controller
-@Scope("prototype")
-public class MyOwnController {
+@Scope("prototype") //При демонстрации scopes
+public class MyMvcController {
 
     @Autowired
     CounterBean counter;
