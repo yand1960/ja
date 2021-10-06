@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 import java.util.List;
 
+//1. Сделать mvn install  проекте репозитория
+//2. Этот проект размещать способом mvn package
+//3. Jackson  добавить в pom, чтобы обеспечить
+// автоматическую сериализацию
 
 @RestController
 public class ProductController {

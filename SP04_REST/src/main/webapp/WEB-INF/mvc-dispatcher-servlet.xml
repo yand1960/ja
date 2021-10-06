@@ -21,7 +21,12 @@
     <context:component-scan base-package="my.rest" />
     <context:component-scan base-package="my.dal" />
     <context:component-scan base-package="my.buslog" />
+
+
+<!--    Без этого не работают статические ресурсы:-->
     <mvc:default-servlet-handler />
+
+
     <mvc:annotation-driven />
 
 </beans>

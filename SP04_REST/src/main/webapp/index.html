@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <script>
+        async function getProducts() {
+            let url = "api/products?letters="
+                    + document.getElementById("letters").value;
+            let query = await fetch(url);
+            let products = query.json();
+            console.log(products);
+        }
+    </script>
+</head>
+<body>
+    <input id="letters" onkeyup="getProducts();"/>
+    <div id="products"></div>
+</body>
+</html>
