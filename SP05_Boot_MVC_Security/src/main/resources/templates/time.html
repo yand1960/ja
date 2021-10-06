@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <title>Time</title>
+</head>
+<body>
+    <h1>It is MVC</h1>
+    <h2 th:text="${data}"></h2>
+    <table border="1">
+        <tr th:each="p:${poets}">
+            <td th:text="${p.key}"></td>
+            <td th:text="${p.value}"></td>
+        </tr>
+    </table>
+</body>
+</html>
